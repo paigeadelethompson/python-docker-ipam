@@ -311,3 +311,6 @@ pipenv run dev-server
 - Docker swarm support; swarm is technically possible but should be revisted. Must be compatible with both VXLAN/eBGP and swarm mesh networking topologies
 - Custom prefix length (deviation from schema)
 - default behavior when no filter/select tags are specified
+
+# Example of where it would be useful 
+- Docker-ory; where it could be used instead of manually allocating networks to each network plane of containers (all that would be required is specifying a tag name; https://github.com/paigeadelethompson/docker-ory/blob/master/or_cockroach/docker-compose.yml#L3
