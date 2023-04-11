@@ -90,7 +90,7 @@ requests to `request_address` for IPv6 a `/128` is given and a `/32` for IPv4 fr
         }]
     }, {
         "network": "100.64.0.0",
-        "prefix": 15,
+        "prefix": 17,
         "child_prefix": 20,
         "propagate_tags": true,
         "lock_down": true,
