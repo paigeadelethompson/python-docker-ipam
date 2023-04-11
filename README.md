@@ -311,6 +311,12 @@ pipenv run dev-server
 - Docker swarm support; swarm is technically possible but should be revisted. Must be compatible with both VXLAN/eBGP and swarm mesh networking topologies
 - Custom prefix length (deviation from schema)
 - default behavior when no filter/select tags are specified
-
-# Example of where it would be useful 
+- I actually found that a guid / uuid is about the perfect storage type for both IPv4 and v6 although TinyDB is just a JSON/document oriented database with no collation or indexing. I think ultimately what I wanted to do was on disk to store 1 file per scope, and a directory tree like: 
+```
+prefixlen/network/... 
+                  network1.json 
+                  network2.json
+```
+# Example of where this driver is intended to be used
+Why its useful: 
 - Docker-ory; where it could be used instead of manually allocating networks to each network plane of containers (all that would be required is specifying a tag name; https://github.com/paigeadelethompson/docker-ory/blob/master/or_cockroach/docker-compose.yml#L3
