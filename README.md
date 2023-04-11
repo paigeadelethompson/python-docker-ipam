@@ -7,14 +7,14 @@ database file (see TODO below for more information.)
 - Docker networks can be created and deleted using this IPAM driver for both IPv4 and IPv6.
 
 # Schema configuration
-This IPAM driver is mainly schema driven. The idea is to create pools and to specify allocation preference tags to indicate which pools to 
-draw from. Specific pools can be selected using the `scope_filter_tags` IPAM driver option with `docker network create`.
+This IPAM driver is mainly schema driven. The idea is to create pools and to specify allocation preference tags to indicate which pools to draw from. Specific pools can be selected using the `scope_filter_tags` IPAM driver option with `docker network create`.
+
 Here is an example schema that contains a root level IPv6 (ULA) pool `fc00:f00f::/32` and several definitions
 for `/48` pools beneath it. This schema also contains a root level IPv4 pool `100.64.0.0/15` and several `/20`
 defintions beneath it. For IPv6, each `/48` definition the child prefix designates a size of `/64`, which will
 be the allocation size for requests to `request_pool` for `docker network create` however for address lease
 requests to `request_address` for IPv6 a `/128` is given and a `/32` for IPv4 from the pool allocated by
-`request_pool`.
+`request_pool`:
 
 ```
 {
