@@ -55,9 +55,7 @@ requests to `request_address` for IPv6 a `/128` is given and a `/32` for IPv4 fr
             "propagate_tags": true,
             "pre_seed_children": false,
             "tags": [
-                "ingress",
-                "hidden_service",
-                "tor"
+                "ingress"
             ],
             "scopes": []
         }, {
