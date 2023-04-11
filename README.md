@@ -28,7 +28,7 @@ requests to `request_address` for IPv6 a `/128` is given and a `/32` for IPv4 fr
         "pre_seed_children": false,
         "tcp_ip_version": 6,
         "tags": [
-            "netwerk"
+            "python_docker_ipam_default"
         ],
         "scopes": [{
             "network": "fc00:f00f:0::",
