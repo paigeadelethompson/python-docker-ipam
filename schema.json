@@ -1,0 +1,146 @@
+{
+    "schema_version": 1,
+    "scopes": [{
+        "network": "fc00:f00f::",
+        "prefix": 32,
+        "child_prefix": 48,
+        "propagate_tags": true,
+        "lock_down": true,
+        "pre_seed_children": false,
+        "tcp_ip_version": 6,
+        "tags": [
+            "netwerk"
+        ],
+        "scopes": [{
+            "network": "fc00:f00f:0::",
+            "child_prefix": 64,
+            "propagate_tags": true,
+            "pre_seed_children": false,
+            "tags": [
+                "null_routed",
+                "default"
+            ],
+            "scopes": []
+        }, {
+            "network": "fc00:f00f:1::",
+            "child_prefix": 64,
+            "propagate_tags": true,
+            "pre_seed_children": false,
+            "tags": [
+                "internally_routed"
+            ],
+            "scopes": []
+        }, {
+            "network": "fc00:f00f:2::",
+            "child_prefix": 64,
+            "propagate_tags": true,
+            "pre_seed_children": false,
+            "tags": [
+                "ingress",
+                "hidden_service",
+                "tor"
+            ],
+            "scopes": []
+        }, {
+            "network": "fc00:f00f:3::",
+            "child_prefix": 64,
+            "propagate_tags": true,
+            "pre_seed_children": false,
+            "tags": [
+                "externally_routed",
+                "egress",
+                "ingress"
+            ],
+            "scopes": []
+        }, {
+            "network": "fc00:f00f:4::",
+            "child_prefix": 64,
+            "propagate_tags": true,
+            "pre_seed_children": false,
+            "tags": [
+                "general_purpose"
+            ],
+            "scopes": []
+        }, {
+            "network": "fc00:f00f:5::",
+            "child_prefix": 64,
+            "propagate_tags": true,
+            "pre_seed_children": false,
+            "tags": [
+                "host_to_container"
+            ],
+            "scopes": []
+        }]
+    }, {
+        "network": "100.64.0.0",
+        "prefix": 15,
+        "child_prefix": 20,
+        "propagate_tags": true,
+        "lock_down": true,
+        "pre_seed_children": false,
+        "tcp_ip_version": 4,
+        "tags": [
+            "netwerk"
+        ],
+        "scopes": [{
+            "network": "100.64.0.0",
+            "child_prefix": 30,
+            "propagate_tags": true,
+            "pre_seed_children": false,
+            "tags": [
+                "null_routed",
+                "default"
+            ],
+            "scopes": []
+        }, {
+            "network": "100.64.16.0",
+            "child_prefix": 30,
+            "propagate_tags": true,
+            "pre_seed_children": false,
+            "tags": [
+                "internally_routed"
+            ],
+            "scopes": []
+        }, {
+            "network": "100.64.32.0",
+            "child_prefix": 30,
+            "propagate_tags": true,
+            "pre_seed_children": false,
+            "tags": [
+                "ingress",
+                "hidden_service",
+                "tor"
+            ],
+            "scopes": []
+        }, {
+            "network": "100.64.48.0",
+            "child_prefix": 30,
+            "propagate_tags": true,
+            "pre_seed_children": false,
+            "tags": [
+                "externally_routed",
+                "egress",
+                "ingress"
+            ],
+            "scopes": []
+        }, {
+            "network": "100.64.64.0",
+            "child_prefix": 30,
+            "propagate_tags": true,
+            "pre_seed_children": false,
+            "tags": [
+                "general_purpose"
+            ],
+            "scopes": []
+        }, {
+            "network": "100.64.80.0",
+            "child_prefix": 30,
+            "propagate_tags": true,
+            "pre_seed_children": false,
+            "tags": [
+                "host_to_container"
+            ],
+            "scopes": []
+        }]
+    }]
+}

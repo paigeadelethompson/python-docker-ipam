@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  python-docker-ipam-plugin:
+    hostname: python-docker-ipam-plugin
+    domainname: docker.internal
+    restart: unless-stopped
+    build:
+      context: .
+    volumes:
+      - data:/data:rw
+      - /var/run/docker/plugins:/var/run/docker/plugins
+
+volumes:
+  data:
+    name: pyipam_data

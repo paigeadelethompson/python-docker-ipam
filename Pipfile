@@ -1,0 +1,20 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+ipython = "*"
+
+[packages]
+ipaddress = "*"
+flask = "*"
+tinydb = "*"
+uwsgi = "*"
+
+[requires]
+python_version = "3.8"
+
+[scripts]
+dev-server = "uwsgi --http-socket /run/docker/plugins/pyipam.sock --wsgi-file src/server.py --master --callable f --py-autoreload 1 --need-app --log-master"
+server = "uwsgi --http-socket /run/docker/plugins/pyipam.sock --wsgi-file src/server.py --master --callable f --log-master --need-app"
